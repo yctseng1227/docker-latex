@@ -1,6 +1,6 @@
-# Some Complier with VSCode
+# LaTeX Complier with VSCode
 
-## LaTeX
+## Feature
 - support CJK8
 - support SSH
 - can directly pull from [dockerhub](https://hub.docker.com/repository/docker/arikoi/vscode_latex)
@@ -11,7 +11,7 @@
 
 ### Usage
 ```
-$ docker-compose up -d
+$ docker-compose up --build -d
 $ docker exec -it [container_id] bash
-$ passwd # change password
+(docker)$ passwd # change password
 ```
