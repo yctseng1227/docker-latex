@@ -3,11 +3,14 @@ version: '3.7'
 services: 
   latex:
     build: ./latex
+    image: 'docker-latex'
     environment:
       - PUID=1000
       - PGID=1000
     volumes:
       - ./latex/workspace:/root/
-      - /root/.ssh:/root/.ssh/
+      - /root/.ssh:/root/.ssh/:ro
     ports:
       - '0.0.0.0:2222:22'
+    restart: unless-stopped
+    container_name: 'latex'
